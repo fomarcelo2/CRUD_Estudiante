@@ -55,9 +55,18 @@
             this.label8 = new System.Windows.Forms.Label();
             this.dgTablaDAtos = new System.Windows.Forms.DataGridView();
             this.errorM = new System.Windows.Forms.ErrorProvider(this.components);
+            this.tsRecoverUser = new System.Windows.Forms.ToolStripButton();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dgTablaDAtosEliminados = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgTablaDAtos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorM)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgTablaDAtosEliminados)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -71,12 +80,13 @@
             this.tsEditUser,
             this.tsDeleteUser,
             this.tsSaveXML,
+            this.tsRecoverUser,
             this.tsExitApp});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Margin = new System.Windows.Forms.Padding(20, 20, 20, 5);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(8);
-            this.toolStrip1.Size = new System.Drawing.Size(768, 125);
+            this.toolStrip1.Size = new System.Drawing.Size(787, 125);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -102,7 +112,7 @@
             this.tsAddUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsAddUser.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsAddUser.Name = "tsAddUser";
-            this.tsAddUser.Size = new System.Drawing.Size(84, 106);
+            this.tsAddUser.Size = new System.Drawing.Size(84, 84);
             this.tsAddUser.Text = "tsAgregarUsuario";
             this.tsAddUser.ToolTipText = "Nuevo estudiante";
             this.tsAddUser.Click += new System.EventHandler(this.tsAddUser_Click);
@@ -114,7 +124,7 @@
             this.tsSearchUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsSearchUser.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsSearchUser.Name = "tsSearchUser";
-            this.tsSearchUser.Size = new System.Drawing.Size(84, 106);
+            this.tsSearchUser.Size = new System.Drawing.Size(84, 84);
             this.tsSearchUser.Text = "tsSearchUser";
             this.tsSearchUser.ToolTipText = "Buscar estudiante";
             this.tsSearchUser.Click += new System.EventHandler(this.tsSearchUser_Click);
@@ -122,24 +132,28 @@
             // tsEditUser
             // 
             this.tsEditUser.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsEditUser.Enabled = false;
             this.tsEditUser.Image = ((System.Drawing.Image)(resources.GetObject("tsEditUser.Image")));
             this.tsEditUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsEditUser.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsEditUser.Name = "tsEditUser";
-            this.tsEditUser.Size = new System.Drawing.Size(84, 106);
+            this.tsEditUser.Size = new System.Drawing.Size(84, 84);
             this.tsEditUser.Text = "tsEditUser";
             this.tsEditUser.ToolTipText = "Editar datos estudiante";
+            this.tsEditUser.Click += new System.EventHandler(this.tsEditUser_Click);
             // 
             // tsDeleteUser
             // 
             this.tsDeleteUser.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsDeleteUser.Enabled = false;
             this.tsDeleteUser.Image = ((System.Drawing.Image)(resources.GetObject("tsDeleteUser.Image")));
             this.tsDeleteUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsDeleteUser.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsDeleteUser.Name = "tsDeleteUser";
-            this.tsDeleteUser.Size = new System.Drawing.Size(84, 106);
+            this.tsDeleteUser.Size = new System.Drawing.Size(84, 84);
             this.tsDeleteUser.Text = "tsDelete";
             this.tsDeleteUser.ToolTipText = "Borrar datos estudiante";
+            this.tsDeleteUser.Click += new System.EventHandler(this.tsDeleteUser_Click);
             // 
             // tsSaveXML
             // 
@@ -148,7 +162,7 @@
             this.tsSaveXML.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsSaveXML.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsSaveXML.Name = "tsSaveXML";
-            this.tsSaveXML.Size = new System.Drawing.Size(84, 106);
+            this.tsSaveXML.Size = new System.Drawing.Size(84, 84);
             this.tsSaveXML.Text = "tsSaveFile";
             this.tsSaveXML.ToolTipText = "Guardar archivo XML";
             this.tsSaveXML.Click += new System.EventHandler(this.tsSaveXML_Click);
@@ -160,7 +174,7 @@
             this.tsExitApp.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsExitApp.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsExitApp.Name = "tsExitApp";
-            this.tsExitApp.Size = new System.Drawing.Size(84, 106);
+            this.tsExitApp.Size = new System.Drawing.Size(84, 84);
             this.tsExitApp.Text = "tsExitApp";
             this.tsExitApp.ToolTipText = "Salir de la aplicacion";
             this.tsExitApp.Click += new System.EventHandler(this.tsExitApp_Click);
@@ -290,7 +304,7 @@
             // dgTablaDAtos
             // 
             this.dgTablaDAtos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgTablaDAtos.Location = new System.Drawing.Point(25, 411);
+            this.dgTablaDAtos.Location = new System.Drawing.Point(9, 16);
             this.dgTablaDAtos.Name = "dgTablaDAtos";
             this.dgTablaDAtos.RowHeadersWidth = 51;
             this.dgTablaDAtos.RowTemplate.Height = 24;
@@ -301,12 +315,66 @@
             // 
             this.errorM.ContainerControl = this;
             // 
+            // tsRecoverUser
+            // 
+            this.tsRecoverUser.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsRecoverUser.Image = ((System.Drawing.Image)(resources.GetObject("tsRecoverUser.Image")));
+            this.tsRecoverUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsRecoverUser.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsRecoverUser.Name = "tsRecoverUser";
+            this.tsRecoverUser.Size = new System.Drawing.Size(76, 106);
+            this.tsRecoverUser.Text = "tsRecuperarUsuario";
+            this.tsRecoverUser.ToolTipText = "Recuperar usuario";
+            this.tsRecoverUser.Click += new System.EventHandler(this.tsRecoverUser_Click);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(12, 395);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(763, 261);
+            this.tabControl1.TabIndex = 17;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.dgTablaDAtos);
+            this.tabPage1.Location = new System.Drawing.Point(4, 34);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(755, 223);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Estudiantes activos";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.dgTablaDAtosEliminados);
+            this.tabPage2.Location = new System.Drawing.Point(4, 34);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(755, 223);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Estudiantes eliminados";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dgTablaDAtosEliminados
+            // 
+            this.dgTablaDAtosEliminados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgTablaDAtosEliminados.Location = new System.Drawing.Point(15, 16);
+            this.dgTablaDAtosEliminados.Name = "dgTablaDAtosEliminados";
+            this.dgTablaDAtosEliminados.RowHeadersWidth = 51;
+            this.dgTablaDAtosEliminados.RowTemplate.Height = 24;
+            this.dgTablaDAtosEliminados.Size = new System.Drawing.Size(725, 191);
+            this.dgTablaDAtosEliminados.TabIndex = 17;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(768, 703);
-            this.Controls.Add(this.dgTablaDAtos);
+            this.ClientSize = new System.Drawing.Size(787, 703);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.txtNota4In);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtNota3In);
@@ -333,6 +401,10 @@
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgTablaDAtos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorM)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgTablaDAtosEliminados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,6 +437,11 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgTablaDAtos;
         private System.Windows.Forms.ErrorProvider errorM;
+        private System.Windows.Forms.ToolStripButton tsRecoverUser;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.DataGridView dgTablaDAtosEliminados;
     }
 }
 
