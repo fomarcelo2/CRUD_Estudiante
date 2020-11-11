@@ -7,3 +7,4 @@ E:\adsi\III Trimestre\Programacion .NET\Clase V\AppEstudiantesCRUD\AppEstudiante
 E:\adsi\III Trimestre\Programacion .NET\Clase V\AppEstudiantesCRUD\AppEstudiantesCRUD\obj\Debug\AppEstudiantesCRUD.csproj.GenerateResource.cache
 E:\adsi\III Trimestre\Programacion .NET\Clase V\AppEstudiantesCRUD\AppEstudiantesCRUD\obj\Debug\AppEstudiantesCRUD.exe
 E:\adsi\III Trimestre\Programacion .NET\Clase V\AppEstudiantesCRUD\AppEstudiantesCRUD\obj\Debug\AppEstudiantesCRUD.pdb
+E:\adsi\III Trimestre\Programacion .NET\Clase V\AppEstudiantesCRUD\AppEstudiantesCRUD\obj\Debug\AppEstudiantesCRUD.MenuPrincipal.resources

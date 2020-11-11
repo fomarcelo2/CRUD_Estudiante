@@ -147,7 +147,18 @@ namespace AppEstudiantesCRUD
         //BOTON SALIR
         private void tsExitApp_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            //Cuando se cierra se guarda la informacion
+            //crear archivo xml
+            XmlSerializer codificador = new XmlSerializer(typeof(List<Alumno>));
+            TextWriter escribirXml = new StreamWriter("..\\..\\..\\..\\Archivos\\listaAlumnos.xml");
+            codificador.Serialize(escribirXml, listaAlumnos);
+            escribirXml.Close();
+
+            //crar archivo con lista de alumnos eliminados
+            TextWriter escribirXmlEliminados = new StreamWriter("..\\..\\..\\..\\Archivos\\listaAlumnosEliminados.xml");
+            codificador.Serialize(escribirXmlEliminados, listaAlumnosEliminados);
+            escribirXmlEliminados.Close();
+            this.Hide();
         }
 
        

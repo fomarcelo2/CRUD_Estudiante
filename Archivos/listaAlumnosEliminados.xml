@@ -1,2 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ArrayOfAlumno xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+<ArrayOfAlumno xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Alumno>
+    <Codigo>145</Codigo>
+    <Nombre>Luisa</Nombre>
+    <Correo>luisa@mail.com</Correo>
+    <Nota1>4</Nota1>
+    <Nota2>5</Nota2>
+    <Nota3>4</Nota3>
+    <Nota4>5</Nota4>
+    <NotaFinal>4.5</NotaFinal>
+    <NotaConcepto>Aprobado</NotaConcepto>
+  </Alumno>
+  <Alumno>
+    <Codigo>232</Codigo>
+    <Nombre>Andres</Nombre>
+    <Correo>am@mail.com</Correo>
+    <Nota1>5</Nota1>
+    <Nota2>5</Nota2>
+    <Nota3>5</Nota3>
+    <Nota4>5</Nota4>
+    <NotaFinal>5</NotaFinal>
+    <NotaConcepto>Aprobado</NotaConcepto>
+  </Alumno>
+</ArrayOfAlumno>

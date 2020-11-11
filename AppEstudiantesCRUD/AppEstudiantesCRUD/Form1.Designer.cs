@@ -37,6 +37,7 @@
             this.tsEditUser = new System.Windows.Forms.ToolStripButton();
             this.tsDeleteUser = new System.Windows.Forms.ToolStripButton();
             this.tsSaveXML = new System.Windows.Forms.ToolStripButton();
+            this.tsRecoverUser = new System.Windows.Forms.ToolStripButton();
             this.tsExitApp = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCodigoIn = new System.Windows.Forms.TextBox();
@@ -55,7 +56,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.dgTablaDAtos = new System.Windows.Forms.DataGridView();
             this.errorM = new System.Windows.Forms.ErrorProvider(this.components);
-            this.tsRecoverUser = new System.Windows.Forms.ToolStripButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -79,9 +79,9 @@
             this.tsSearchUser,
             this.tsEditUser,
             this.tsDeleteUser,
+            this.tsExitApp,
             this.tsSaveXML,
-            this.tsRecoverUser,
-            this.tsExitApp});
+            this.tsRecoverUser});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Margin = new System.Windows.Forms.Padding(20, 20, 20, 5);
             this.toolStrip1.Name = "toolStrip1";
@@ -112,7 +112,7 @@
             this.tsAddUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsAddUser.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsAddUser.Name = "tsAddUser";
-            this.tsAddUser.Size = new System.Drawing.Size(84, 84);
+            this.tsAddUser.Size = new System.Drawing.Size(84, 106);
             this.tsAddUser.Text = "tsAgregarUsuario";
             this.tsAddUser.ToolTipText = "Nuevo estudiante";
             this.tsAddUser.Click += new System.EventHandler(this.tsAddUser_Click);
@@ -124,7 +124,7 @@
             this.tsSearchUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsSearchUser.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsSearchUser.Name = "tsSearchUser";
-            this.tsSearchUser.Size = new System.Drawing.Size(84, 84);
+            this.tsSearchUser.Size = new System.Drawing.Size(84, 106);
             this.tsSearchUser.Text = "tsSearchUser";
             this.tsSearchUser.ToolTipText = "Buscar estudiante";
             this.tsSearchUser.Click += new System.EventHandler(this.tsSearchUser_Click);
@@ -137,7 +137,7 @@
             this.tsEditUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsEditUser.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsEditUser.Name = "tsEditUser";
-            this.tsEditUser.Size = new System.Drawing.Size(84, 84);
+            this.tsEditUser.Size = new System.Drawing.Size(84, 106);
             this.tsEditUser.Text = "tsEditUser";
             this.tsEditUser.ToolTipText = "Editar datos estudiante";
             this.tsEditUser.Click += new System.EventHandler(this.tsEditUser_Click);
@@ -150,7 +150,7 @@
             this.tsDeleteUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsDeleteUser.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsDeleteUser.Name = "tsDeleteUser";
-            this.tsDeleteUser.Size = new System.Drawing.Size(84, 84);
+            this.tsDeleteUser.Size = new System.Drawing.Size(84, 106);
             this.tsDeleteUser.Text = "tsDelete";
             this.tsDeleteUser.ToolTipText = "Borrar datos estudiante";
             this.tsDeleteUser.Click += new System.EventHandler(this.tsDeleteUser_Click);
@@ -162,10 +162,22 @@
             this.tsSaveXML.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsSaveXML.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsSaveXML.Name = "tsSaveXML";
-            this.tsSaveXML.Size = new System.Drawing.Size(84, 84);
+            this.tsSaveXML.Size = new System.Drawing.Size(84, 106);
             this.tsSaveXML.Text = "tsSaveFile";
             this.tsSaveXML.ToolTipText = "Guardar archivo XML";
             this.tsSaveXML.Click += new System.EventHandler(this.tsSaveXML_Click);
+            // 
+            // tsRecoverUser
+            // 
+            this.tsRecoverUser.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsRecoverUser.Image = ((System.Drawing.Image)(resources.GetObject("tsRecoverUser.Image")));
+            this.tsRecoverUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsRecoverUser.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsRecoverUser.Name = "tsRecoverUser";
+            this.tsRecoverUser.Size = new System.Drawing.Size(76, 106);
+            this.tsRecoverUser.Text = "tsRecuperarUsuario";
+            this.tsRecoverUser.ToolTipText = "Recuperar usuario";
+            this.tsRecoverUser.Click += new System.EventHandler(this.tsRecoverUser_Click);
             // 
             // tsExitApp
             // 
@@ -174,7 +186,7 @@
             this.tsExitApp.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsExitApp.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsExitApp.Name = "tsExitApp";
-            this.tsExitApp.Size = new System.Drawing.Size(84, 84);
+            this.tsExitApp.Size = new System.Drawing.Size(84, 106);
             this.tsExitApp.Text = "tsExitApp";
             this.tsExitApp.ToolTipText = "Salir de la aplicacion";
             this.tsExitApp.Click += new System.EventHandler(this.tsExitApp_Click);
@@ -314,18 +326,6 @@
             // errorM
             // 
             this.errorM.ContainerControl = this;
-            // 
-            // tsRecoverUser
-            // 
-            this.tsRecoverUser.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsRecoverUser.Image = ((System.Drawing.Image)(resources.GetObject("tsRecoverUser.Image")));
-            this.tsRecoverUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsRecoverUser.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsRecoverUser.Name = "tsRecoverUser";
-            this.tsRecoverUser.Size = new System.Drawing.Size(76, 106);
-            this.tsRecoverUser.Text = "tsRecuperarUsuario";
-            this.tsRecoverUser.ToolTipText = "Recuperar usuario";
-            this.tsRecoverUser.Click += new System.EventHandler(this.tsRecoverUser_Click);
             // 
             // tabControl1
             // 
